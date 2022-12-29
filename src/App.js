@@ -22,11 +22,17 @@ function App() {
     });
   };
 
+  /* 
+    1. The React built-in wrapper <> and </> below is called Fragment element, which used to wrap React components, is also another workaround to which wont render in DOM and a 
+    solution to avoid multiple divs to be rendered in DOM (Div Soup problem - endless nested divs due to many components has wrapper divs renders in DOM)
+    2. We also can use other built in React Fragment wrappers, such as <React.Fragments></React.Fragments> by importing React into the component 
+    3. We also can futher simplify by using another built-in React wrapper by importing React and {Fragment} together and use <Fragment></Fragment> as a wrapper
+  */
   return (
-    <div>
+    <>
       <AddUser onAddUser={addUserHandler} />
       <UsersList users={usersData} />
-    </div>
+    </>
   );
 }
 

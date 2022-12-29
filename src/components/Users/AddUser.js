@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Card from "../UI/Card";
 import Button from "../UI/Button";
 import ErrorModal from "../UI/ErrorModal";
+import Wrapper from "../Helpers/Wrapper";
 
 import styles from "./AddUser.module.css";
 
@@ -66,7 +67,7 @@ const AddUser = (props) => {
     props."whatever key name you set here on props", but im choosing className just to be semanctically correct
   */
   return (
-    <div>
+    <Wrapper>
       {
         // This is how to render conditionally using JSX without need to use css display method
         /* 
@@ -111,7 +112,7 @@ const AddUser = (props) => {
           </p>
         </form>
       </Card>
-    </div>
+    </Wrapper>
   );
 };
 

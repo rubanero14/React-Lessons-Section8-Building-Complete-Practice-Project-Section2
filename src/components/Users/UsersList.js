@@ -17,7 +17,9 @@ const UsersList = (props) => {
         </ul>
       )}
       {props.users.length === 0 && (
-        <div className={styles.notFound}>No Users found!</div>
+        <div className={styles.notFound}>
+          <strong>No Users found!</strong>
+        </div>
       )}
     </Card>
   );

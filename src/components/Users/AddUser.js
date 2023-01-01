@@ -21,6 +21,7 @@ const AddUser = (props) => {
     // Prevent page from refreshing upon submit evnt fired
     event.preventDefault();
 
+    // Refs are a direct way getting info from real DOM than using useState and event listeners, and oes the same job getting info from real DOM with lesser codes
     const enteredName = nameInputRef.current.value;
     const enteredUserAge = ageInputRef.current.value;
 
@@ -44,7 +45,7 @@ const AddUser = (props) => {
     // Sending new user data using props function to parent component to update new list or array of users whenever add use button is clicked
     props.onAddUser(enteredName, enteredUserAge);
 
-    // Garbage Collection
+    // Garbage Collection - normally not best practice directly manipulate DOM, but in this case resetting input upon submit data is acceptable
     nameInputRef.current.value = "";
     ageInputRef.current.value = "";
   };

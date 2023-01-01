@@ -22,7 +22,7 @@ const UsersList = (props) => {
       )}
       {props.users.length === 0 && (
         <p className={styles.notFound}>
-          <strong>No Users found!</strong>
+          <strong>No Users found, add one?</strong>
         </p>
       )}
     </Card>

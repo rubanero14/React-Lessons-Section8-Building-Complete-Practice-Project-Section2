@@ -7,7 +7,7 @@ html {
   background: #b4b22f93;
 }
 
-body {
+body, svg {
   margin: 0;
 }
 

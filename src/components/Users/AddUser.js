@@ -16,12 +16,19 @@ const AddUser = (props) => {
     error: false,
   });
 
+  /*
+    1. Controlled Components => using useState to handle DOM elements and its values and its internal states using Virtual DOM, purely using React
+    2. Uncontrolled Components => using useRef to handle real DOM elements values and its internal states using native DOM elements, not using React, although useRef is part
+       of React.
+   */
+
   // onSubmit event handler =>
   const addUserHandler = (event) => {
     // Prevent page from refreshing upon submit evnt fired
     event.preventDefault();
 
     // Refs are a direct way getting info from real DOM than using useState and event listeners, and oes the same job getting info from real DOM with lesser codes
+    // useRef returns an object name current with props such as value and etc
     const enteredName = nameInputRef.current.value;
     const enteredUserAge = ageInputRef.current.value;
 

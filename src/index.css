@@ -4,9 +4,15 @@
 
 html {
   font-family: sans-serif;
-  background: #1f1f1f;
+  background: #b4b22f93;
 }
 
 body {
   margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, label, p {
+    background: linear-gradient(90deg, #42410293, #4f005f);
+    color: transparent;
+    -webkit-background-clip: text;    
 }

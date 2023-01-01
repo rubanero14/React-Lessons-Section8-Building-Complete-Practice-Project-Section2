@@ -11,15 +11,19 @@ const UsersList = (props) => {
         <ul>
           {props.users.map((user) => (
             <li key={user.userName + user.age}>
-              {user.userName} ({user.age} y/o)
+              <p className={styles.list}>
+                <strong>
+                  {user.userName} &nbsp;({user.age} years old!)
+                </strong>
+              </p>
             </li>
           ))}
         </ul>
       )}
       {props.users.length === 0 && (
-        <div className={styles.notFound}>
+        <p className={styles.notFound}>
           <strong>No Users found!</strong>
-        </div>
+        </p>
       )}
     </Card>
   );

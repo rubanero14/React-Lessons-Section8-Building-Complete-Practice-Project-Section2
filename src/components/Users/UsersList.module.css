@@ -2,27 +2,29 @@
   margin: 2rem auto;
   width: 90%;
   max-width: 40rem;
+  background: transparent;
+  box-shadow: none;
 }
 
 .users ul {
   list-style: none;
-  padding: 1rem;
+  padding-left: 0;
+  background-color: transparent;
 }
 
 .users li {
-  border: 1px solid #ccc;
   margin: 0.5rem 0;
-  padding: 0.5rem;
   border-radius: 8px;
-}
-
-.users .list {
-  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .users .notFound {
+  display: block;
   text-align: center;
   font-size: 16px;
   font-weight: 500;
   padding: 15px;
+  background: linear-gradient(90deg, rgb(212, 158, 167), #9903b8);
+  color: transparent;
+  -webkit-background-clip: text;
 }

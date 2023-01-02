@@ -1,0 +1,19 @@
+.svg {
+    color: #9903b8;
+    cursor: pointer;
+}
+
+.listCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.8rem;
+}
+
+.users .list {
+    padding: 15px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, rgb(212, 158, 167), #9903b8);
+    color: transparent;
+    -webkit-background-clip: text;
+}

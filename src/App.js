@@ -22,6 +22,12 @@ function App() {
     });
   };
 
+  const deleteUserHandler = (userId) => {
+    setUsersData((prevUsers) => {
+      return prevUsers.filter((user) => user.id !== userId);
+    });
+  };
+
   /* 
     1. The React built-in wrapper <> and </> below is called Fragment element, which used to wrap React components, is also another workaround to which wont render in DOM and a 
     solution to avoid multiple divs to be rendered in DOM (Div Soup problem - endless nested divs due to many components has wrapper divs renders in DOM)
@@ -31,7 +37,7 @@ function App() {
   return (
     <>
       <AddUser onAddUser={addUserHandler} />
-      <UsersList users={usersData} />
+      <UsersList users={usersData} onDelete={deleteUserHandler} />
     </>
   );
 }

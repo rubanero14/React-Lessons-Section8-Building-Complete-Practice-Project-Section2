@@ -2,21 +2,20 @@
   display: inline-block;
   text-align: center;
   font: inherit;
-  border: 1px solid #8f8c0393;
   border-radius: 4px;
-  background: #8f8c0393;
+  background: linear-gradient(90deg, rgb(212, 158, 167), #b206d4);
   color: white;
   padding: 0.25rem 1rem;
   cursor: pointer;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0, 0.5);
   text-decoration: none;
   width: fit-content;
+  border: none;
 }
 
 .button:hover,
 .button:active {
-  background: #75730393;
-  border-color: #75730393;
+  background: linear-gradient(90deg, rgb(196, 145, 154), #9903b8);
 }
 
 .button:focus {

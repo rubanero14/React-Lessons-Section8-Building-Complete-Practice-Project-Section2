@@ -6,10 +6,13 @@
 }
 
 .input label {
-  display: block;
   font-weight: bold;
   margin-bottom: 0.5rem;
   font-size: 18px;
+  display: inline-block;
+  background: linear-gradient(90deg, rgb(250, 186, 197), #9903b8);
+  color: transparent;
+  -webkit-background-clip: text;
 }
 
 .input input {

@@ -4,15 +4,16 @@
 
 html {
   font-family: sans-serif;
-  background: #b4b22f93;
+  background: linear-gradient(90deg, rgb(212, 158, 167), #b206d4)
 }
 
 body, svg {
   margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6, label, p {
-    background: linear-gradient(90deg, #42410293, #4f005f);
-    color: transparent;
-    -webkit-background-clip: text;    
+h1, h2, h3, h4, h5, h6, p {
+  display: inline-block;
+  background: linear-gradient(90deg, rgb(212, 158, 167), #9903b8);
+  color: transparent;
+  -webkit-background-clip: text;    
 }

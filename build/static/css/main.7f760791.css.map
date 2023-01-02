@@ -1,0 +1,25 @@
+{
+  "version": 3,
+  "file": "./main.7f760791.css",
+  "mappings": "AAAA,EACE,qBACF,CAEA,KAEE,iDAA8D,CAD9D,sBAEF,CAEA,SACE,QACF,CAEA,oBAEE,iDAA+D,CAE/D,4BAA6B,CAD7B,iBAAkB,CAFlB,oBAIF,CClBA,kBACE,eAAgB,CAEhB,kBAAmB,CADnB,sCAEF,CCJA,uBAKE,iDAA+D,CAO/D,WAAY,CARZ,iBAAkB,CAKlB,sCAAwC,CAHxC,UAAY,CAEZ,cAAe,CAPf,oBAAqB,CAErB,YAAa,CAUb,oBAAsB,CAXtB,iBAAkB,CAQlB,oBAAqB,CACrB,yBAAkB,CAAlB,sBAAkB,CAAlB,iBAGF,CAEA,2DAEE,iDACF,CAEA,6BACE,YACF,CAEA,yBACE,uBACE,UACF,CACF,CC7BA,4BAOE,0BAA+B,CAF/B,YAAa,CAFb,MAAO,CAFP,cAAe,CACf,KAAM,CAEN,UAAW,CAEX,UAEF,CAEA,yBAGE,QAAS,CAGT,eAAgB,CALhB,cAAe,CACf,QAAS,CAET,SAAU,CACV,WAEF,CAEA,0BACE,iDAA+D,CAC/D,YACF,CAEA,6BAEE,UAAY,CADZ,QAEF,CAEA,2BACE,YACF,CAEA,2BAEE,YAAa,CACb,wBAAyB,CAFzB,YAGF,CAEA,yBACE,yBACE,sBAAuB,CACvB,WACF,CACF,CC5CA,sBACE,gBAAiB,CAGjB,eAAgB,CAFhB,YAAa,CACb,SAEF,CAEA,4BAKE,iDAA+D,CAE/D,4BAA6B,CAD7B,iBAAkB,CAFlB,oBAAqB,CADrB,cAAe,CAFf,eAAiB,CACjB,mBAMF,CAEA,4BAIE,qBAAsB,CACtB,kBAAmB,CAHnB,aAAc,CADd,YAAa,CAMb,kBAAmB,CADnB,kBAAoB,CAHpB,UAKF,CAEA,kCAEE,sBAAuB,CADvB,YAEF,CAEA,6CACE,SACF,CClCA,qBACI,aAAc,CACd,cACJ,CAEA,0BAGI,kBAAmB,CAFnB,YAAa,CACb,6BAA8B,CAE9B,eACJ,CAEA,6CAGI,iDAA+D,CAE/D,4BAA6B,CAD7B,iBAAkB,CAHlB,YAAa,CACb,wBAIJ,CClBA,wBAIE,sBAAuB,CACvB,eAAgB,CAJhB,gBAAiB,CAEjB,eAAgB,CADhB,SAIF,CAEA,2BAGE,wBAA6B,CAF7B,eAAgB,CAChB,cAEF,CAEA,2BAEE,iBAAkB,CAClB,mBACF,CAEA,mDAME,iDAA+D,CAE/D,4BAA6B,CAD7B,iBAAkB,CANlB,aAAc,CAEd,cAAe,CACf,eAAgB,CAChB,YAAa,CAHb,iBAOF",
+  "sources": [
+    "index.css",
+    "components/UI/Card.module.css",
+    "components/UI/Button.module.css",
+    "components/UI/ErrorModal.module.css",
+    "components/Users/AddUser.module.css",
+    "components/Users/ListItem.module.css",
+    "components/Users/UsersList.module.css"
+  ],
+  "sourcesContent": [
+    "* {\n  box-sizing: border-box;\n}\n\nhtml {\n  font-family: sans-serif;\n  background: linear-gradient(90deg, rgb(212, 158, 167), #b206d4)\n}\n\nbody, svg {\n  margin: 0;\n}\n\nh1, h2, h3, h4, h5, h6, p {\n  display: inline-block;\n  background: linear-gradient(90deg, rgb(212, 158, 167), #9903b8);\n  color: transparent;\n  -webkit-background-clip: text;    \n}\n",
+    ".card {\n  background: #fff;\n  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 26%);\n  border-radius: 10px;\n}",
+    ".button {\n  display: inline-block;\n  text-align: center;\n  font: inherit;\n  border-radius: 4px;\n  background: linear-gradient(90deg, rgb(212, 158, 167), #b206d4);\n  color: white;\n  padding: 0.25rem 1rem;\n  cursor: pointer;\n  box-shadow: 0 2px 8px 0 rgb(0 0 0 / 26%);\n  text-decoration: none;\n  width: fit-content;\n  border: none;\n  padding: 0.6rem 1.5rem;\n}\n\n.button:hover,\n.button:active {\n  background: linear-gradient(90deg, rgb(196, 145, 154), #9903b8);\n}\n\n.button:focus {\n  outline: none;\n}\n\n@media (width <= 600px) {\n  .button {\n    width: 100%;\n  }\n}",
+    ".backdrop {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100vh;\n  z-index: 10;\n  background: rgba(0, 0, 0, 0.75);\n}\n\n.modal {\n  position: fixed;\n  top: 30vh;\n  left: 10%;\n  width: 80%;\n  z-index: 100;\n  overflow: hidden;\n}\n\n.header {\n  background: linear-gradient(90deg, rgb(212, 158, 167), #b206d4);\n  padding: 1rem;\n}\n\n.header h2 {\n  margin: 0;\n  color: white;\n}\n\n.content {\n  padding: 1rem;\n}\n\n.actions {\n  padding: 1rem;\n  display: flex;\n  justify-content: flex-end;\n}\n\n@media (min-width: 768px) {\n  .modal {\n    left: calc(50% - 20rem);\n    width: 40rem;\n  }\n}",
+    ".input {\n  margin: 2rem auto;\n  padding: 1rem;\n  width: 90%;\n  max-width: 40rem;\n}\n\n.input label {\n  font-weight: bold;\n  margin-bottom: 0.5rem;\n  font-size: 18px;\n  display: inline-block;\n  background: linear-gradient(90deg, rgb(250, 186, 197), #9903b8);\n  color: transparent;\n  -webkit-background-clip: text;\n}\n\n.input input {\n  font: inherit;\n  display: block;\n  width: 100%;\n  border: 1px solid #ccc;\n  border-radius: 16px;\n  padding: 0.5rem 1rem;\n  margin-bottom: 1rem;\n}\n\n.input input:focus {\n  outline: none;\n  border-color: #8f8c0393;\n}\n\n.input p.alert {\n  color: red;\n}",
+    ".svg {\r\n    color: #9903b8;\r\n    cursor: pointer;\r\n}\r\n\r\n.listCard {\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n    padding: 0 0.8rem;\r\n}\r\n\r\n.users .list {\r\n    padding: 15px;\r\n    text-transform: uppercase;\r\n    background: linear-gradient(90deg, rgb(212, 158, 167), #9903b8);\r\n    color: transparent;\r\n    -webkit-background-clip: text;\r\n}",
+    ".users {\n  margin: 2rem auto;\n  width: 90%;\n  max-width: 40rem;\n  background: transparent;\n  box-shadow: none;\n}\n\n.users ul {\n  list-style: none;\n  padding-left: 0;\n  background-color: transparent;\n}\n\n.users li {\n  margin: 0.5rem 0;\n  border-radius: 8px;\n  margin-bottom: 10px;\n}\n\n.users .notFound {\n  display: block;\n  text-align: center;\n  font-size: 16px;\n  font-weight: 500;\n  padding: 15px;\n  background: linear-gradient(90deg, rgb(212, 158, 167), #9903b8);\n  color: transparent;\n  -webkit-background-clip: text;\n}\n"
+  ],
+  "names": [],
+  "sourceRoot": ""
+}

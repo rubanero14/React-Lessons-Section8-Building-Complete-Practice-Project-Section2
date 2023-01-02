@@ -7,6 +7,7 @@ const Button = (props) => {
     <React.Fragment>
       {props.buttonType === "button" && (
         <button
+          title={props.title}
           className={styles.button}
           type={props.type || "button"}
           onClick={props.onClick}
@@ -16,6 +17,7 @@ const Button = (props) => {
       )}
       {props.buttonType === "link" && (
         <a
+          title={props.title}
           className={styles.button}
           target="_blank"
           href={props.link}
